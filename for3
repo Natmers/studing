@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+double S = 0;
+int main()
+{
+    cout << "n - ";
+    int n;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        S += 1 / pow((2*n + 1), 2);
+    }
+    cout << "S = " << S;
+    
+    return 0;
+}
