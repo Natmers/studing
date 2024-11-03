@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+#include <windows.h>
+
+using namespace std;
+
+int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    double x, S;
+
+    cout << "Введіть значення x: ";
+    cin >> x;
+
+    S = 0;
+    for (int k = 1; k <= 5; k++) {
+        S += cos(pow(x, k)) / pow((x + 5), k);
+    }
+    cout << "(for) Сума S = " << S << endl;
+
+    S = 0;
+    int k = 1;
+    while (k <= 5) {
+        S += cos(pow(x, k)) / pow((x + 5), k);
+        k++;
+    }
+    cout << "(while) Сума S = " << S << endl;
+
+    S = 0;
+    k = 1;
+    do {
+        S += cos(pow(x, k)) / pow((x + 5), k);
+        k++;
+    } while (k <= 5);
+    cout << "(do-while) Сума S = " << S << endl;
+
+    return 0;
+}
