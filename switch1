@@ -1,0 +1,32 @@
+#include <iostream>
+#include <windows.h>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	double x, sum;
+	int number;
+	
+	cout << "Введіть x: ";
+	cin >> x;
+	cout << "Введіть номер (1 - K = 1, 2 - K = 2, 3 - K = 3, 4 - K = 4): ";
+
+	cin >> number;
+	
+	switch (number)
+	{
+	case 1: { cout << "K = 1\n"; sum = sin(exp(1 + x) + 1) + x * x; break; }
+	case 2: { cout << "K = 2\n"; sum = sqrt(2 * x + abs(sin(x))) + x; break; }
+	case 3: { cout << "K = 3\n"; sum = 1 / cos(x * x) + x; break; }
+	case 4: { cout << "K = 4\n"; sum = 2 * x - pow(sin(x), 2); break; }
+	default: { cout << "Число не підходить"; break; }
+		   return 0;
+	}
+
+	cout << "Сума: " << sum << endl;
+	return 0;
+}
