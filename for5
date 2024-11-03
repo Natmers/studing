@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    cout << "n - ";
+    int n;
+    cin >> n;
+    cout << "x - ";
+    double x;
+    cin >> x;
+
+    double sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += pow((x + i),2*i - 1) / (i*i);
+    }
+    cout << sum;
+
+    return 0;
+}
