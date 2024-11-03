@@ -1,0 +1,24 @@
+#include <iostream>
+#include <windows.h>
+#include <math.h>
+
+using namespace std;
+int main()
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    double A, B;
+    int n;
+    cout << "Введіть число(1, 2, 3): ";
+    cin >> n;
+
+    switch (n) {
+    case 1: { A = -3; B = 3.5; cout << A << " " << B << endl; break; }
+    case 2: { A = 58; B = 27; cout << A << " " << B << endl; break; }
+    case 3: { A = -8; B = -35; cout << A << " " << B << endl; break; }
+    default: "Помилка!"; break;
+    }
+
+    if ((A > 0 && B < 0) || (A < 0 && B > 0)) { A = -A; B = -B; cout << A << " " << B; }
+    else { A = 0; B = 0; cout << A << " " << B; }
+}
