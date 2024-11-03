@@ -1,0 +1,23 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    int num, max, min;
+
+    cin >> num;
+    max = min = num;
+
+    for (; cin >> num && num != 0;) {
+        if (num > max) max = num;
+        if (num < min) min = num;
+    }
+
+    cout << "Різниця: " << max - min << endl;
+
+    return 0;
+}
