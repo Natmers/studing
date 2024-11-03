@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+double x, i, S = 0;
+
+int main()
+{
+    cout << "X - ";
+    cin >> x;
+    
+    for (i = 1; i <= 9; i++) {
+        S += i * sin((i + 2) * x);
+    }
+    cout << "S = " << S;
+
+    return 0;
+}
