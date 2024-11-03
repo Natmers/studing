@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+double a, sum, x, h = 0.2, b = 2;
+
+int main()
+{
+    
+    x = 1;
+    for (; a <= b; a += h) {
+        sum += cos(x) * exp(-x);
+        cout << "f(" << x << ") = " << sum;
+    }
+
+    return 0;
+}
